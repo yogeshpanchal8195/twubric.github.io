@@ -1,0 +1,38 @@
+<h2 mat-dialog-title>{{data.fullname}}</h2>
+<mat-dialog-content>
+    <div class="float-left">
+        <img [src]="data.image">
+    </div>
+    <div class="float-left">
+        <div class="heading">
+            <span class="header">Total : </span>
+            <span>{{data.twubric.total}}</span>
+        </div>
+        <div class="heading">
+            <span class="header">Friends : </span>
+            <span>{{data.twubric.friends}}</span>
+        </div>
+        <div class="heading">
+            <span class="header">Influence : </span>
+            <span>{{data.twubric.influence}}</span>
+        </div>
+        <div class="heading">
+            <span class="header">Chirpiness : </span>
+            <span>{{data.twubric.chirpiness}}</span>
+        </div>
+    </div>
+    <div class="width-100">
+            <div class="heading">
+                <span class="header">ID : </span>
+                <span>{{data.uid}}</span>
+            </div>
+            <div class="heading">
+                <span class="header">USER NAME : </span>
+                <span>{{data.username}}</span>
+            </div>
+        </div>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-button mat-dialog-close>Close</button>
+</mat-dialog-actions>
+

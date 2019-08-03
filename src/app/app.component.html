@@ -1,0 +1,92 @@
+<div class="layer" *ngIf="dailogOpened"></div>
+
+<div>
+  <div class="sort-section">
+    <div class="sort">Sort By</div>
+    <div>
+      <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+
+        <mat-button-toggle value="Twubric Score" (click)="sortBy('total',1)"
+          [ngClass]="{'selectedSort':selectedSort==1}" (keydown.shift.control.t)="sortByShortCut('total',1)">Twubric
+          Score</mat-button-toggle>
+        <mat-button-toggle value="Friends" (click)="sortBy('friends',2)" [ngClass]="{'selectedSort':selectedSort==2}"
+          (keydown.shift.control.f)="sortByShortCut('friends',2)">Friends</mat-button-toggle>
+        <mat-button-toggle value="Influence" (click)="sortBy('influence',3)"
+          [ngClass]="{'selectedSort':selectedSort==3}" (keydown.shift.control.i)="sortByShortCut('influence',3)">
+          Influence</mat-button-toggle>
+        <mat-button-toggle value="Chirpiness" (click)="sortBy('chirpiness',4)"
+          [ngClass]="{'selectedSort':selectedSort==4}" (keydown.shift.control.c)="sortByShortCut('chirpiness',4)">
+          Chirpiness</mat-button-toggle>
+      </mat-button-toggle-group>
+    </div>
+  </div>
+  <div class="date-filter">
+    <div class="sort">Joined Twitter between</div>
+    <div>
+      <div style="margin: auto;height: 40px;">
+        <div class="date-data float-left">
+          <span class="bold start-date">
+            Start Date :
+          </span>
+          <input type="date" (change)="change($event,1)">
+        </div>
+        <div class="date-data float-left">
+          <input class=" margin-50 float-right" type="date" (change)="change($event,2)">
+          <span class="bold float-right end-date">
+            End Date :
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="data">
+    <div class="sort" *ngIf="dataList.length">Records</div>
+    <div class="sort" *ngIf="!dataList.length">No Records Found</div>
+    <div class="tbl">
+      <div *ngFor="let data of dataList" class="loop-container">
+        <table (click)="openDialog(data)" [title]="'Click for more Details'">
+          <tr>
+            <th colspan="2">
+              {{data.fullname}}
+            </th>
+            <th>
+              {{data.twubric.total}}
+            </th>
+          </tr>
+          <tr>
+            <td>
+              <div>
+                {{data.twubric.friends}}
+              </div>
+              <div class="heading">
+                Friends
+              </div>
+            </td>
+            <td>
+              <div>
+                {{data.twubric.influence}}
+              </div>
+              <div class="heading">
+                Influence
+              </div>
+            </td>
+            <td>
+              <div>
+                {{data.twubric.chirpiness}}
+              </div>
+              <div class="heading">
+                Chirpiness
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">{{data.join_date | date}}</td>
+            <td (click)="removeData(data.uid)" class="remove-btn" [title]="'Delete'">
+              <img src="assets/images/images.png">
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

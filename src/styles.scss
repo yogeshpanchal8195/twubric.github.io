@@ -1,0 +1,39 @@
+// @import 'material-icons/iconfont/material-icons.scss';
+// @import '~material-icons/iconfont/material-icons.scss';
+
+// .material-icons {
+//     @include material-icons();
+//   }
+
+.overlayClass{
+    box-shadow: 1px 5px 10px rgba(0,0,0,0.56) ;
+    margin: auto;
+    position: absolute;
+}
+
+mat-dialog-container{
+    background-color: white;
+    position: absolute;
+}
+
+.mat-dialog-container{
+    width: 600px !important;
+    height: 400px !important;
+}
+
+.cdk-overlay-container{
+    position: absolute;
+    top: 180px;
+}
+    
+div{
+    box-sizing: border-box;
+}
+
+.cdk-overlay-backdrop.cdk-overlay-dark-backdrop.cdk-overlay-backdrop-showing{
+    width: 100vw;
+}
+
+.bold{
+    font-weight: bold;
+}

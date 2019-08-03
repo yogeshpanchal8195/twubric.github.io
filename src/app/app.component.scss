@@ -1,0 +1,118 @@
+table, th, td {
+    border: 1px solid rgba(0,0,0,0.36);
+    // padding: 0 !important;
+    border-collapse: collapse;
+}
+
+table{
+    float: left;
+    width:300px;
+    margin: 15px;
+}
+
+.sort{
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin: 16px;
+}
+
+th,td{
+    text-align: center;
+    height: 30px;
+}
+
+th{
+    font-size: 18px;
+} 
+
+.heading{
+    padding: 8px 0;
+}
+
+mat-button-toggle-group{
+    width: 100%;
+}
+
+mat-button-toggle{
+    width: 25%;
+    border: 1px solid rgba(0,0,0,0.36)
+}
+
+mat-button-toggle:hover{
+    background-color: rgba(0,0,0,0.02);
+}
+
+.remove-btn{
+    cursor: pointer;
+    font-weight: bold;
+    color: darkcyan;
+}
+
+.remove-btn:hover{
+    background-color: beige;
+}
+
+.selectedSort{
+    font-weight: bold;
+    color: white;
+    background-color:#315361 !important;
+    box-shadow: 1px 5px 10px rgba(0,0,0,0.36);
+}
+
+table:hover{
+    box-shadow: 1px 5px 10px rgba(0,0,0,0.36);
+}
+
+th{
+    color: darkcyan;
+}
+
+.layer{
+    height: 130%;
+    width:100%;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.36);
+}
+
+.cls, .data{
+    height: -webkit-fill-available;
+}
+
+img{
+    height: 16px;
+}
+
+.loop-container{
+    height:auto;
+    width:auto;
+    float:left
+}
+
+.date-data{
+    width: 50%;
+}
+
+.float-right{
+    float: right;
+}
+
+.float-left{
+    float: left;
+}
+
+.start-date{
+    margin-left: 50px;
+    margin-right: 10px;
+}
+
+.end-date{
+    margin-right: 10px;
+}
+
+.margin-50{
+    margin-right: 50px;
+}
